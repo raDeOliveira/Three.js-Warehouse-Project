@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+    <title>rAoliveira - CGM - ISPGaya@2019100463</title>
+
+<!--  using new THREE version modules  -->
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../node_modules/dat.gui/build/dat.gui.js"></script>
+    <script type="text/javascript" src="../node_modules/three/build/three.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/controls/TrackballControls.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/controls/OrbitControls.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/utils/SceneUtils.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/controls/FlyControls.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/controls/FirstPersonControls.js"></script>
+    <script type="text/javascript" src="../node_modules/three/examples/js/libs/stats.min.js"></script>
+
+    <script type="text/javascript" src="Webgl.js"></script>
+    <script type="text/javascript" src="GUI.js"></script>
+    <script type="text/javascript" src="MyBox.js"></script>
+    <script type="text/javascript" src="MyShelf.js"></script>
+    <script type="text/javascript" src="ShelfLegs.js"></script>
+    <script type="text/javascript" src="MyWarehouse.js"></script>
+    <script type="text/javascript" src="MySpotLight.js"></script>
+    <script type="text/javascript" src="MyRobot.js"></script>
+    <script type="text/javascript" src="MyPlane.js"></script>
+    <script type="text/javascript" src="MyWalls.js"></script>
+<!--    custom css-->
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+        body {
+            /* set margin to 0 and overflow to hidden, to go fullscreen */
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div id="GUI-output">
+</div>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+
+<script type="text/javascript">
+
+    $(function (){
+        let webgl = new Webgl();
+
+        let render = function (){
+            requestAnimationFrame(render);
+            webgl.render();
+        };
+        render();
+    });
+</script>
+
+
+</body>
+</html>

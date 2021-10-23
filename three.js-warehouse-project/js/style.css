@@ -1,0 +1,9 @@
+/*
+for the console GUI position
+*/
+#GUI-output {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 10;
+}
